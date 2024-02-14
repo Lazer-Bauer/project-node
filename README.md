@@ -6,7 +6,7 @@
 
 ### This app is exactly like the requirements of the assignments, where the assignment wasn't clear I stated it in that action the rule
 
-# the core in this project allows request from any address this what the lecture Danial Tzadok said to do
+# the core in this project allows request from any address this what the lecture Danial Tzadok said to do. the .env is also in gitHub Yehonatan M said its ok
 
 # ENVIRONMENTS
 
