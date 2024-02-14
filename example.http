@@ -1,0 +1,209 @@
+@local=http://localhost:3000/api
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWNkMTEzZDFiZTI0NmU4Zjg1Mzg4MTQiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MDc5Mzg2NTl9.3A6jROu97_IcLGnTNjxzQsgD1cmK7Ne8b_Al44b-7r8
+
+POST {{local}}/users/login
+Content-Type: application/json
+
+{ 
+  "email":"cikay@gmail.com",
+  "password":"zliezer22#djHJ"
+}
+
+###
+
+POST {{local}}/users
+Content-Type: application/json
+
+{
+  
+  "email":"cikay@gmail.com",
+  "password":"zliezer22#djHJ",
+  "isBusiness":"true",
+  "isAdmin":"true",
+  "phone":"0585979532",
+  "name":{
+        "first":"eliezer",
+        "last":"bauer"
+  },
+  
+  "address":{
+    "country":"israel",
+    "city":"jerusalem",
+    "street":"peri chadash",
+    "houseNumber":"10"
+  },
+   "image":{
+        "url":"",
+        "alt":""
+    } 
+  
+}
+###
+GET {{local}}/users
+Content-Type: application/json
+x-auth-token: {{token}}
+
+
+
+###
+
+GET {{local}}/users/65cbe5c9d6b27e1695602191
+Content-Type: application/json
+x-auth-token: {{token}}
+
+
+
+###
+DELETE  {{local}}/users/65c94f0ef9b54a32dc1f9684
+Content-Type: application/json
+x-auth-token: {{token}}
+
+
+###
+POST {{local}}/users/login
+Content-Type: application/json
+
+{ "email":"tarar@gmail.com",
+  "password":"Eliezer22#djHJ"
+}
+
+###
+
+PUT {{local}}/users/65cd113d1be246e8f8538814
+Content-Type: application/json
+x-auth-token: {{token}} 
+
+{
+  
+ "email":"cikay@gmail.com",
+  "password":"zliezer22#djlkHJlpo",
+  "isBusiness":"false",
+  "isAdmin":"false",
+  "phone":"0585979532",
+  "name":{
+        "first":"lkio",
+        "last":"njki"
+  },
+  
+  "address":{
+    "country":"israel",
+    "city":"jerusalem",
+    "street":"peri chadash",
+    "houseNumber":"10"
+  },
+   "image":{
+        "url":"",
+        "alt":""
+    } 
+  
+}
+
+###
+
+PATCH {{local}}/users/65cbe5c9d6b27e1695602191
+Content-Type: application/json
+x-auth-token: {{token}} 
+
+{
+  
+    "email":"boris@gmail.com",
+  "password":"Eliezer22#djHJ",
+  "isBusiness":"true",
+  "phone":"0585979532",
+  "name":{
+        "first":"andrew",
+        "last":"bauer"
+  },
+  
+  "address":{
+    "country":"israel",
+    "city":"jerusalem",
+    "street":"peri chadash",
+    "houseNumber":"10"
+  },
+   "image":{
+        "url":"https://cdn.pixabay.com/photo/2023/12/12/16/15/winter-8445565_640.jpg",
+        "alt":"djhfjhfj"
+    } 
+}
+
+
+# cards request
+
+###
+GET {{local}}/cards
+###
+
+GET {{local}}/cards/my-cards
+Content-Type: application/json
+x-auth-token: {{token}} 
+###
+
+GET {{local}}/cards/65c270df80efcc3e7e83c14e
+
+
+
+###
+
+POST {{local}}/cards
+Content-Type: application/json
+x-auth-token: {{token}} 
+
+{
+  "title":"f35 plane",
+  "subtitle":"nodejs",
+  "description":"final project",
+  "phone":"058329243905",
+  "email":"tyr5@gmail.com",
+  "web":"www.gmaikiol.com",
+  "address":{
+    "country":"israel",
+    "city":"London",
+    "street":"avvim st",
+    "houseNumber":"10",
+    "zip":"100"
+  },
+  "image":{
+    "url":"",
+    "alt":""
+  }
+}
+###
+
+PUT {{local}}/cards/65cbe697f1f85c07b2e50015
+Content-Type: application/json
+x-auth-token:{{token}}
+
+{
+  "title":"life",
+  "subtitle":"nodejs",
+  "description":"final projec",
+  "phone":"0585979532",
+  "email":"lazerbauer@gmail.com",
+  "web":"www.google.com.il",
+  "address":{
+    "country":"switzerland",
+    "city":"davos",
+    "street":"avvim st",
+    "houseNumber":"10",
+    "zip":"100"
+  }
+}
+
+
+
+
+###
+PATCH {{local}}/cards/65c95feda90b067de0e1591c
+Content-Type: application/json
+x-auth-token:{{token}}
+
+###
+DELETE  {{local}}/cards/65c95feda90b067de0e1591c
+Content-Type: application/json
+x-auth-token: {{token}}
+
+
+
+
+//65ba83c221cdaf29679aa2a0
