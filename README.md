@@ -119,6 +119,8 @@ Admins have broader access to all cards.
 Error Handling
 The API returns appropriate error messages and status codes for different scenarios, such as invalid requests or unauthorized access.
 
+### I did the bonus of blocking a user who fails the password more than 3 times
+
 ## Technologies Used
 
 Node.js
